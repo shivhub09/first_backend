@@ -17,7 +17,7 @@ def load_and_preprocess_image(image_data, target_size=(150, 150)):
     img = tf.expand_dims(img, axis=0) 
     return img
 
-@app.route('/', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     try:
         if 'image' not in request.json:
