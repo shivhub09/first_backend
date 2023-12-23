@@ -1,2 +1,4 @@
 Flask
+base64
+tensorflow
 Gunicorn
