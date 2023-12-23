@@ -1,4 +1,2 @@
 Flask
-base64
 Gunicorn
-numpy
