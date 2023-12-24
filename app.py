@@ -4,7 +4,6 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-# Load the TFLite model
 interpreter = tf.lite.Interpreter(model_path='your_model.tflite')
 interpreter.allocate_tensors()
 
@@ -45,4 +44,6 @@ def predict():
         # Log the error
         app.logger.error("Prediction error: %s", str(e))
         return jsonify({'error': 'An error occurred during prediction'})
+
+
 
