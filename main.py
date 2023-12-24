@@ -35,7 +35,6 @@ def predict():
         interpreter.set_tensor(input_details[0]['index'], input_img)
         interpreter.invoke()
 
-        # Get the model output
         output = interpreter.get_tensor(output_details[0]['index'])
 
         return jsonify({'prediction': output.tolist()})
